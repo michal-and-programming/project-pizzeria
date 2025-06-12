@@ -1,6 +1,6 @@
-import {select, classNames, templates, settings} from "./settings.js";
+import {select, classNames, templates, settings} from "../settings.js";
 import CartProduct from "./CartProduct.js";
-import utils from "./utils.js";
+import utils from "../utils.js";
 
 class Cart{
   constructor(element){
@@ -93,7 +93,7 @@ class Cart{
 
   sendOrder() {
     const thisCart = this;
-    const url = settings.amountWidget.db.url + '/' + settings.amountWidget.db.orders;
+    const url = settings.db.url + '/' + settings.db.orders;
     const payload = {
       address: thisCart.dom.address.value,
       phone: thisCart.dom.phone.value,
