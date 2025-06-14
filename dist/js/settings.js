@@ -54,6 +54,7 @@ export  const select = {
             totalPrice: '.cart__total-price strong, .cart__order-total .cart__order-price-sum strong',
             subtotalPrice: '.cart__order-subtotal .cart__order-price-sum strong',
             deliveryFee: '.cart__order-delivery .cart__order-price-sum strong',
+            orderTotal: '.cart__order-total .cart__order-price-sum',
             form: '.cart__order',
             formSubmit: '.cart__order [type="submit"]',
             phone: '[name="phone"]',
