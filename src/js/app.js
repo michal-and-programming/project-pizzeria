@@ -82,6 +82,7 @@ const app = {
       console.log('settings:', settings);
       console.log('templates:', templates);*/
       thisApp.initPages();    
+      thisApp.initHome();
       thisApp.initData();
       thisApp.initBooking();
     //thisApp.initCart();
@@ -108,8 +109,8 @@ const app = {
   initHome: function(){
     const thisApp = this;
 
-    const widgetContainer = document.querySelector('.home-wrapper');
-    thisApp.home = new Home(widgetContainer);
+    const widgetContainer = document.querySelector('.home-page');
+    thisApp.home = new Home(widgetContainer, thisApp);
   }
 };
 

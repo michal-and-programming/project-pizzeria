@@ -264,29 +264,29 @@
          {
          "image": "images/home/pizza-3.jpg",
          "title": "Great pizza",
-         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-         "author": "Kacperek"
+         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+         "author": "-Kacperek"
          },
          {
          "image": "images/home/pizza-3.jpg",
          "title": "Funny restaurant",
-         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-         "author": "Julia"
+         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+         "author": "-Julia"
          },
          {
          "image": "images/home/pizza-3.jpg",
          "title": "Almost for free",
-         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-         "author": "Michał"
+         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+         "author": "-Michał"
          }
       ],
       "gallery": [
-         "images/home/pizza-4.jpg",
-         "images/home/pizza-5.jpg",
-         "images/home/pizza-6.jpg",
-         "images/home/pizza-7.jpg",
-         "images/home/pizza-8.jpg",
-         "images/home/pizza-9.jpg"
+         { "image": "images/home/pizza-4.jpg" },
+         { "image": "images/home/pizza-5.jpg" },
+         { "image": "images/home/pizza-6.jpg" },
+         { "image": "images/home/pizza-7.jpg" },
+         { "image": "images/home/pizza-8.jpg" },
+         { "image": "images/home/pizza-9.jpg" }
       ]
    }
 }

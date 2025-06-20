@@ -75,48 +75,58 @@
     </section>
   </div>
 
-  <script id="template-home" type="text/x-handlebars-template"></script>  
+  <script id="template-home" type="text/x-handlebars-template">
     <div class="home-wrapper"> 
-      <div class="link-wrapper">
-        <div>
-          <div class="order-link-wrapper image-container">
-            <img src="images/home/pizza-1.jpg" alt="image">
-            <div class="absolute">
-              <p>ORDER ONLINE</p>
+      <div class="all-data-wrapper">
+        <div class="link-wrapper">
+          <a href="#order" class="link">
+            <div class="order-link-wrapper image-container">
+              <img src="images/home/pizza-1.jpg" alt="image">
+              <div class="absolute">
+                <p>ORDER ONLINE</p>
+                <span class="span-disappear">Lorem Ipsum is simply dummy text</span>
+              </div>
             </div>
-          </div>
-          <div class="booking-link-wrapper image-container">
-            <img src="images/home/pizza-2.jpg" alt="image">
-            <div class="absolute">
-              <p>BOOK A TABLE</p>
+          </a>
+          <a href="#booking" class="link">
+            <div class="booking-link-wrapper image-container">
+              <img src="images/home/pizza-2.jpg" alt="image">
+              <div class="absolute">
+                <p>BOOK A TABLE</p>
+                <span class="span-disappear">Lorem Ipsum is simply dummy text</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="opening-data-wrapper">
           <p>OPENING HOURS:</p>
           <p>TUE-SUN,12PM-12AM</p>
         </div>
       </div>
-
-      <div class="main-carousel" data-flickity='{ "autoPlay": true }'>
-        {{ #each carousel }} <!-- carousel is a table used to generate more of the same element -->
-        <div class="carousel-cell">
-          <img src="{{ image }}" alt="image">
-          <h2>{{ title }}</h2>
-          <p>{{ text }}</p>
-          <p>{{ author }}</p>
+      <div class="main-carousel" data-flickity='{"autoPlay": true}'>
+        {{#each carousel}}
+          <div class="carousel-cell">
+            <div class="carousel-items">
+              <div class="carousel-image-container">
+                <img src="{{image}}" alt="image"/>
+              </div>
+              <div class="carousel-text-container">
+                <h2>{{title}}</h2>
+                <p>{{text}}</p>
+                <p>{{author}}</p>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <div class="gallery-container">
+        {{#each gallery}}
+        <div class="gallery-image-container">
+          <img src="{{image}}" alt="image"/>
         </div>
         {{/each}}
       </div>
-
-      <div>
-        {{ #each gallery }}
-        <div>
-          <img src="{{ image }}" alt="image">
-        </div>
-        {{ /each }}
-      </div>
-      <div>
+      <div class="insta-link-container">
         <a href="#">View more on insta</a>
       </div>
     </div>
@@ -300,4 +310,3 @@
   <script src="js/app.js" type="module"></script>
 </body>
 </html>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy

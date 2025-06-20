@@ -1,9 +1,11 @@
 import { settings, templates } from "../settings.js";
 
 class Home{
-  constructor(element){
+  constructor(element, refToApp){
     const thisHome = this;
     thisHome.element = element;
+    thisHome.refToApp = refToApp;
+
     thisHome.render();
   }
 
@@ -25,12 +27,12 @@ class Home{
       }
     })
     .then(function(data){
-      const generatedHTML = templates.homeWidget({
+      const generatedHTML = templates.homePage({
         carousel: data.carousel,
         gallery: data.gallery,
       })
       thisHome.element.innerHTML = generatedHTML;
-      console.log(generatedHTML);
+      thisHome.initCarousel();
       thisHome.initAction();
     })
     .catch(function(error){
@@ -38,17 +40,29 @@ class Home{
     })
   }
 
-   
+  initCarousel(){
+    const elem = document.querySelector('.main-carousel');
+    new Flickity( elem, {
+    cellAlign: 'left',
+    contain: true,
+    autoPlay: 3000,
+    wrapAround: true,
+    pageDots: true
+    });
+  }
 
   initAction(){
+    const thisHome = this;
     const linkOrder = document.querySelector('.order-link-wrapper');
     const linkBooking = document.querySelector('.booking-link-wrapper');
 
-    linkOrder.addEventListener('click', function(){
-      
+    linkOrder.addEventListener('click', function(event){
+      event.preventDefault();
+      thisHome.refToApp.activatePage('order');
     })
-    linkBooking.addEventListener('click', function(){
-      
+    linkBooking.addEventListener('click', function(event){
+      event.preventDefault();
+      thisHome.refToApp.activatePage('booking');
     })
   }
 }
