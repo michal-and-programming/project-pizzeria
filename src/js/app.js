@@ -110,7 +110,7 @@ const app = {
     const thisApp = this;
 
     const widgetContainer = document.querySelector('.home-page');
-    thisApp.home = new Home(widgetContainer, thisApp);
+    thisApp.home = new Home(widgetContainer, thisApp); //thisApp allows access to app.js
   }
 };
 

@@ -1,3 +1,5 @@
+/* global Flickity */
+
 import { settings, templates } from "../settings.js";
 
 class Home{
